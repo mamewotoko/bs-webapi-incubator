@@ -76,6 +76,9 @@ module Impl = (T: {type t;}) => {
   /* evaluate */
   
   /* GlobalEventHandlers interface */
+
+  /* fullscreen */
+  [@bs.set] external onfullscreenchange : (T.t, unit => unit) => unit = "onfullscreenchange"
 };
 
 type t = Dom.document;
